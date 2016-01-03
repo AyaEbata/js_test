@@ -8,10 +8,11 @@ Javascriptでテストなんてしたことなかった^^←糞
 ## 0. 結論から言う！
 
 ```
+> sudo npm install -g mocha
 > npm install --save-dev mocha power-assert intelli-espower-loader
 ```
 
-でmochaとpower-assertの導入は済む！←  
+をさらっと打ち込めば、mochaとpower-assertの導入は済む！←  
 
 けど！  
 「mochaなにそれおいしいの？」  
@@ -23,10 +24,10 @@ Javascriptでテストなんてしたことなかった^^←糞
 ## 1. 概要
 
 **mocha**  
-Javascriptでテストするためのフレームワーク
+　Javascriptでテストするためのフレームワーク
 
 **power-assert**  
-これ使うとSpockみたいに見やすくなる
+　これ使うとSpockみたいに見やすくなる
 
 今回はこの２つを使っていきやす！
 
@@ -36,7 +37,7 @@ Javascriptでテストするためのフレームワーク
 まずは`npm init`で`package.json`つくってあげて、
 
 ```
-> npm install --save-dev mocha
+> npm install -g mocha
 ```
 
 で、mochaちゃんのインストーーール★☆  
@@ -73,7 +74,7 @@ it ("assert", function() {
 まずはインストール(^ω^)
 
 ```text
-npm install --save-dev power-assert intelli-espower-loader
+> npm install --save-dev mocha power-assert intelli-espower-loader
 ```
 
 そんで、上記に書いた`test.js`のソースの１行目`var assert = require("assert");`を`var assert = require("power-assert");`に変更し、以下を実行！
@@ -92,6 +93,14 @@ assert(test === 'fuga')
        "hoge"
 ```
 
+ちなみに、この状態で、
+
+```
+> mocha
+```
+
+を実行すると、power-assertを入れる前の結果（mochaのみのやつ）が出力されるようです^^
+
 
 ## 4. でけた
 
@@ -99,6 +108,14 @@ assert(test === 'fuga')
 Javascriptでテストデビューしました！！！！！！！
 
 次はテスト駆動開発やるのです！！
+
+
+## 5. 後日知ったこと
+
+`npm install`っていちいち書かなくても`npm i`で良いみたいです^^
+
+後、実行時のオプションで`-w`をつけてあげれば、保存したタイミングでテストが走ってくれるらしいです！！！！！！！！！！！！！
+やばいこれ！！！！！！！！！！！！！
 
 
 ### リンク
