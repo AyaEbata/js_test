@@ -46,10 +46,10 @@ Javascriptでテストなんてしたことなかった^^←糞
 ちゃんとできてるか確かめるために、適当に（めんどっちぃから）、[ここ](http://mochajs.org/)の「Getting Started」の「In your editor:」を`test/test.js`にコピって…
 
 ```
-> mocha
+> mocha test/test.js
 ```
 
-で、実行！！  
+で、実行！！（`mocha`だけでもいける）  
 なんか結果みたいなの出力されてればおっけーだとおもう(^ω^)←適当
 
 ちゃんと確かめてみたバージョンのソースはこちら↓↓
@@ -80,7 +80,7 @@ it ("assert", function() {
 そんで、上記に書いた`test.js`のソースの１行目`var assert = require("assert");`を`var assert = require("power-assert");`に変更し、以下を実行！
 
 ```
-> mocha --require intelli-espower-loader
+> mocha --require intelli-espower-loader test/test.js
 ```
 
 Spockみたいなやつが表示されたあああああああああああああ・゜・(PД`q｡)・゜・  
@@ -96,7 +96,7 @@ assert(test === 'fuga')
 ちなみに、この状態で、
 
 ```
-> mocha
+> mocha test/test.js
 ```
 
 を実行すると、power-assertを入れる前の結果（mochaのみのやつ）が出力されるようです^^
