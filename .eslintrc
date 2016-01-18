@@ -1,0 +1,12 @@
+{
+  "extends": "eslint:recommended",  // 最低限のルール
+  "rules": {   // 0: 無効、1: 有効（渓谷）、2: 有効（エラー）
+    "semi": 2  // セミコロン忘れ
+  },
+  "env": {
+    "browser": true, // ブラウザのグローバル変数
+    "node": true,    // nodeのグローバル変数
+    "amd": true,     // define()とrequire()をグローバル変数として定義
+    "mocha": true    // mochaのグローバル変数
+  }
+}
